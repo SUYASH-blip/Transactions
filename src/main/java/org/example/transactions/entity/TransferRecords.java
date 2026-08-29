@@ -9,6 +9,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import java.math.BigDecimal;
 import java.time.LocalDate;
 
 @Getter
@@ -27,4 +28,13 @@ public class TransferRecords {
     private Long ToAccountId;
 
     private LocalDate transferredAt;
+
+    private BigDecimal amount;
+
+    public TransferRecords(Long fromAccountId, Long toAccountId, BigDecimal amount, LocalDate now) {
+    }
+    public void setLocalDate(LocalDate localDate){
+        this.transferredAt = localDate;
+
+    }
 }

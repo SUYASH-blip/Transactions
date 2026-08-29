@@ -26,7 +26,7 @@ public class Account {
 
     private String name;
 
-    public void WithdrawAccount(BigDecimal amount){
+    public void DebitAccount(BigDecimal amount){
         if(amount == null || amount.signum() <= 0){
             throw new RuntimeException("Invalid Amount");
         }
@@ -37,7 +37,7 @@ public class Account {
     }
 
 
-    public void DebitAccount(BigDecimal amount){
+    public void CreditAccount(BigDecimal amount){
         if(amount == null || amount.signum() <= 0){
             throw new RuntimeException("Invalid Amount");
         }
